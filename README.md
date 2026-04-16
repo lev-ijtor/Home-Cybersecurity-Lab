@@ -27,7 +27,7 @@ Internet
 
 ---
 
-## 🖥️ Lab Inventory
+## Lab Inventory
 
 | Host | OS | IP | Role |
 |------|----|----|------|
@@ -42,7 +42,7 @@ Internet
 
 ---
 
-## 📁 Projects & Write-Ups
+## Projects & Write-Ups
 
 | # | Project | Category | Skills Demonstrated |
 |---|---------|----------|-------------------|
@@ -55,7 +55,7 @@ Internet
 
 ---
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 
 **Offensive Security**
 - Kali Linux, Nmap, Metasploit Framework, Hydra, John the Ripper, Impacket
