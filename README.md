@@ -21,7 +21,7 @@ Internet
     │       ├── VulnTarget (Ubuntu)       10.0.0.106
     │       ├── Metasploitable 2          10.0.0.142
     │       ├── DC01 - Windows Server 2022 10.0.0.200
-    │       └── WS01 - Workstation VM     10.0.0.x
+    │       └── WS01 - Workstation VM     10.0.0.201
     └── Linux PC                          10.0.0.1
 ```
 
