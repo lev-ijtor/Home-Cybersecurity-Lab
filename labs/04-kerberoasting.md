@@ -170,7 +170,7 @@ Wrote a custom detection rule targeting the specific combination of fields that 
 | `mitre.id` | T1558.003 | MITRE ATT&CK Kerberoasting technique |
 
 ```
-
+```
 ---
 
 ## Phase 5 — Alert Validation
