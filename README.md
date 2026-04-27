@@ -79,10 +79,10 @@ Internet
 - [x] Complete full penetration test on Metasploitable 2
 - [x] Detect and auto-block brute force attacks with Wazuh active response
 - [x] Build Active Directory environment with realistic domain users
-- [ ] Complete Kerberoasting attack and detection lab
-- [ ] Configure domain-joined workstation (WS01) for lateral movement practice
-- [ ] Write custom Wazuh detection rules for AD attack techniques
-- [ ] Document full incident response exercise with IR report
+- [x] Complete Kerberoasting attack and detection lab
+- [x] Configure domain-joined workstation (WS01) for lateral movement practice
+- [x] Write custom Wazuh detection rules for AD attack techniques
+- [x] Document full incident response exercise with IR report
 
 ---
 
