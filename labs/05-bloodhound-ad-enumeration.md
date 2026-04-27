@@ -13,7 +13,7 @@
 
 ## Objective
 
-Use BloodHound Community Edition and SharpHound to perform comprehensive Active Directory enumeration against the lab.local domain. The goal is to map all AD relationships, identify Tier Zero accounts, discover Kerberoastable service accounts, and visualize attack paths — simulating exactly what a threat actor does after gaining initial domain access.
+Use BloodHound Community Edition and SharpHound to perform comprehensive Active Directory enumeration against the lab.local domain. The goal is to map all AD relationships, identify Tier Zero accounts, discover Kerberoastable service accounts, and visualize attack paths, simulating exactly what a threat actor does after gaining initial domain access.
 
 ---
 
@@ -32,7 +32,7 @@ Use BloodHound Community Edition and SharpHound to perform comprehensive Active 
 
 BloodHound is an Active Directory reconnaissance tool used by both red teamers and blue teamers to map relationships between users, groups, computers, and permissions in an AD environment. It ingests data collected by SharpHound and renders it as an interactive graph, revealing attack paths that would be nearly impossible to find manually.
 
-From an attacker's perspective BloodHound answers the question: **"I have a low-privilege domain account — what is the fastest path to Domain Admin?"**
+From an attacker's perspective BloodHound answers the question: **"I have a low-privilege domain account, what is the fastest path to Domain Admin?"**
 
 From a defender's perspective it answers: **"What attack paths exist in our environment that we need to eliminate?"**
 
@@ -88,13 +88,6 @@ SharpHound is the data collector component of BloodHound. It must run on a **dom
 Downloaded SharpHound v2.12.0 on WS01 from:
 ```
 https://github.com/SpecterOps/SharpHound/releases/tag/v2.12.0
-```
-
-**Note:** Windows Defender and SmartScreen flag SharpHound as a hack tool — expected behavior since it is also used by attackers. Disabled real-time monitoring temporarily for the lab:
-
-```powershell
-Set-MpPreference -DisableRealtimeMonitoring $true
-Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" -Name SmartScreenEnabled -Value "Off"
 ```
 
 ### Run SharpHound
