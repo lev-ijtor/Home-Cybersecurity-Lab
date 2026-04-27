@@ -69,14 +69,7 @@ BloodHound CE runs as a web app at `http://127.0.0.1:8080`. The first time setup
 
 ## Phase 2 - Data Collection with SharpHound
 
-SharpHound has to run on a domain-joined Windows machine because it queries the domain controller via LDAP. Running it on Kali would not work.
-
-Downloaded SharpHound v2.12.0 on WS01 from the official GitHub releases page. Windows Defender and SmartScreen flagged it as a hack tool which is expected behavior. Disabled real-time monitoring temporarily to allow the download:
-
-```powershell
-Set-MpPreference -DisableRealtimeMonitoring $true
-Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" -Name SmartScreenEnabled -Value "Off"
-```
+SharpHound has to run on a domain-joined Windows machine because it queries the domain controller via LDAP.
 
 Ran SharpHound from PowerShell as Administrator:
 
