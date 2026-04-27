@@ -1,28 +1,28 @@
-## Home Cybersecurity Lab
+# Home Cybersecurity Lab
 
 A personal cybersecurity home lab built to develop and document hands-on skills in penetration testing, SIEM detection engineering, incident response, and Active Directory security. All projects are performed in an isolated lab environment.
 
 ---
 
-## Lab Network Overview
+## Network Overview
 
 ```
 Internet
-    │
+    |
 [Google Nest Router - 192.168.86.1]
-    │
-[Linux PC - Ubuntu] ── Gateway / Router / Pi-hole DNS
-    │   10.0.0.1
-    │
+    |
+[Linux PC - Ubuntu] -- Gateway / Router / Pi-hole DNS
+    |   10.0.0.1
+    |
 [TP-Link Switch]
-    ├── Windows PC (Hypervisor Host) ── 10.0.0.111
-    │       ├── Kali Linux (Attacker)     10.0.0.117
-    │       ├── Wazuh SIEM (Ubuntu)       10.0.0.166
-    │       ├── VulnTarget (Ubuntu)       10.0.0.106
-    │       ├── Metasploitable 2          10.0.0.142
-    │       ├── DC01 - Windows Server 2022 10.0.0.200
-    │       └── WS01 - Workstation VM     10.0.0.201
-    └── Linux PC                          10.0.0.1
+    |- Windows PC (Hypervisor Host) -- 10.0.0.111
+    |       |- Kali Linux (Attacker)     10.0.0.117
+    |       |- Wazuh SIEM (Ubuntu)       10.0.0.166
+    |       |- VulnTarget (Ubuntu)       10.0.0.106
+    |       |- Metasploitable 2          10.0.0.142
+    |       |- DC01 - Windows Server 2022 10.0.0.200
+    |       +- WS01 - Workstation VM     10.0.0.201
+    +-- Linux PC                         10.0.0.1
 ```
 
 ---
@@ -42,33 +42,34 @@ Internet
 
 ---
 
-## Projects & Write-Ups
+## Projects and Write-Ups
 
 | # | Project | Category | Skills Demonstrated |
 |---|---------|----------|-------------------|
 | 01 | [Metasploitable 2 Penetration Test](labs/01-metasploitable-pentest.md) | Offensive | Nmap, Metasploit, vsftpd 2.3.4 exploit, privilege escalation, password cracking |
-| 02 | [Wazuh Brute Force Detection & Active Response](labs/02-wazuh-brute-force-detection.md) | Defensive / SIEM | Wazuh rules, active response, Hydra, SSH log analysis |
+| 02 | [Wazuh Brute Force Detection and Active Response](labs/02-wazuh-brute-force-detection.md) | Defensive / SIEM | Wazuh rules, active response, Hydra, SSH log analysis |
 | 03 | [Active Directory Lab Setup](labs/03-active-directory-setup.md) | Infrastructure | AD DS, domain users, SPNs, Group Policy, DNS |
-| 04 | [Kerberoasting Attack & Detection](labs/04-kerberoasting.md) | Offensive + Defensive | Impacket, TGS ticket extraction, Wazuh detection |
-| 05 | [BloodHound AD Enumeration](labs/05-bloodhound-ad-enumeration.md) |Reconnaissance | BloodHound CE, SharpHound, Cypher queries, attack path mapping, Tier Zero identification |
+| 04 | [Kerberoasting Attack and Detection](labs/04-kerberoasting.md) | Offensive + Defensive | Impacket, TGS ticket extraction, Wazuh detection, custom SIEM rules, MITRE T1558.003 |
+| 05 | [BloodHound AD Enumeration](labs/05-bloodhound-ad-enumeration.md) | Reconnaissance | BloodHound CE, SharpHound, Cypher queries, attack path mapping, Tier Zero identification |
+| 06 | [Pass-the-Hash Attack and Detection](labs/06-pass-the-hash.md) | Offensive + Defensive | Mimikatz, NTLM hash extraction, Impacket psexec, Wazuh detection, MITRE T1550.002 |
 
-> More labs added continuously. See commit history for progress.
+More labs added continuously. See commit history for progress.
 
 ---
 
-## Tools & Technologies
+## Tools and Technologies
 
 **Offensive Security**
-- Kali Linux, Nmap, Metasploit Framework, Hydra, John the Ripper, Impacket
+Kali Linux, Nmap, Metasploit Framework, Hydra, John the Ripper, Impacket, Mimikatz, BloodHound, SharpHound
 
-**SIEM & Detection**
-- Wazuh 4.x, Splunk (professional experience), custom detection rules, active response
+**SIEM and Detection**
+Wazuh 4.x, Splunk (professional experience), custom detection rules, active response, Windows Event Log analysis
 
 **Infrastructure**
-- VirtualBox, iptables, Pi-hole, Ubuntu Server, Windows Server 2022, Active Directory
+VirtualBox, iptables, Pi-hole, Ubuntu Server, Windows Server 2022, Active Directory, Tailscale VPN
 
-**Scripting & Admin**
-- Bash, Python, Linux system administration, Windows Server administration
+**Scripting and Admin**
+Bash, Python, Linux system administration, Windows Server administration, PowerShell
 
 ---
 
@@ -83,6 +84,12 @@ Internet
 - [x] Configure domain-joined workstation (WS01) for lateral movement practice
 - [x] Write custom Wazuh detection rules for AD attack techniques
 - [x] Document full incident response exercise with IR report
+- [x] Run BloodHound AD enumeration and attack path analysis
+- [x] Execute Pass-the-Hash lateral movement and detect with Wazuh
+- [x] Configure Tailscale VPN for secure remote lab access
+- [ ] Password spraying attack and detection
+- [ ] PowerShell execution detection engineering
+- [ ] Cloud lab extension (AWS/Azure)
 
 ---
 
@@ -98,6 +105,6 @@ Internet
 
 ## About
 
-**Levi Torres** — CS Graduate (UTSA, B.S. Computer Science, Dec 2025) | 2x Cybersecurity Analyst Intern @ CGI Federal (DoD clients) | Targeting SOC Analyst and Security Engineer roles.
+**Levi Torres** - CS Graduate (UTSA, B.S. Computer Science, Dec 2025) | 2x Cybersecurity Analyst Intern @ CGI Federal (DoD clients) | Targeting SOC Analyst and Security Engineer roles.
 
 [LinkedIn](https://linkedin.com/in/torres-levi) • levi.torres0826@gmail.com
