@@ -50,6 +50,7 @@ Internet
 | 02 | [Wazuh Brute Force Detection & Active Response](labs/02-wazuh-brute-force-detection.md) | Defensive / SIEM | Wazuh rules, active response, Hydra, SSH log analysis |
 | 03 | [Active Directory Lab Setup](labs/03-active-directory-setup.md) | Infrastructure | AD DS, domain users, SPNs, Group Policy, DNS |
 | 04 | [Kerberoasting Attack & Detection](labs/04-kerberoasting.md) | Offensive + Defensive | Impacket, TGS ticket extraction, Wazuh detection |
+| 05 | [BloodHound AD Enumeration](labs/05-bloodhound-ad-enumeration.md) |Reconnaissance | BloodHound CE, SharpHound, Cypher queries, attack path mapping, Tier Zero identification |
 
 > More labs added continuously. See commit history for progress.
 
